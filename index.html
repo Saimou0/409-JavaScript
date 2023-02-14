@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>409 JavaScript Lämpötilamuunnin</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Lämpötilamuunnin</h1>
+
+        <form name="form" action="" method="get">
+            <select name="vaihdos" id="muunokset">
+                <option value="celsiusToFahrenheit">Celsius -> Fahrenheit</option>
+                <option value="celsiusToKelvin">Celsius -> Kelvin</option>
+                <option value="fahrenheitToKelvin">Fahrenheit -> Kelvin</option>
+                <option value="fahrenheitToCelsius">Fahrenheit -> Celsius</option>
+                <option value="kelvinToFahrenheit">Kelvin -> Fahrenheit</option>
+                <option value="kelvinToCelsius">Kelvin -> Celsius</option>
+            </select><br>
+
+            <label for="lampo">Syötä lämpötila:</label><br>
+            <input type="number" id="lampo" name="input" value="">
+
+            <input type="button" value="Laske" onclick="laske(this.form)"><br>
+
+            <input type="radio" id="radio1" name="desimaali" value="1" onchange="laske(this.form)">
+            <label for="radio1">1 desimaali</label><br>
+
+            <input type="radio" id="radio2" name="desimaali" value="2" onchange="laske(this.form)">
+            <label for="radio2">2 desimaali</label><br>
+            
+            <input type="radio" id="radio3" name="desimaali" value="3" onchange="laske(this.form)">
+            <label for="radio3">3 desimaali</label>
+        </form>
+
+        <p id="para"></p>
+
+    </div>
+
+    <script src="lampotila.js"></script>
+
+</body>
+</html>
